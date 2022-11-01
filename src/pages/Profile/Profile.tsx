@@ -21,9 +21,9 @@ const ProfilePage: React.FC<ProfileProps> = () => {
     location.pathname.split("/")[2]
   );
 
-  const onTabClick = (tab: string) => {
-    navigate(tab);
-    setSelectedTab(tab);
+  const handleLogout = () => {
+    localStorage.removeItem(VITE_USER_ID_KEY);
+    window.location.href = "/login";
   };
 
   return (

@@ -24,7 +24,7 @@ const Login: React.FC<LoginProps> = () => {
 
   const { mutate } = useMutation(login, {
     onSuccess: () => {
-      navigate("/");
+      window.location.href = "/";
     },
     onError: (error: { data: { message: string } }) => {
       setShowAlert(true);
